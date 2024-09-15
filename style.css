@@ -1,0 +1,54 @@
+table{
+    width: 80%;
+    border: 2px solid;
+
+}
+td{
+    border: 2px solid;
+    padding: 4px ;
+}
+
+
+
+.marsheetCon{
+    border: 2px solid;
+    width: 75%;
+}
+#boardTileHdr{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* picture section logo */
+
+#picSec{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid;
+}
+#picture{
+    border: 2px solid;
+    height: 150px;
+    width: 100px;
+    margin: 10px;
+}
+
+#logoBoard{
+    border: 2px solid;
+    height: 130px;
+    margin-top: 20px;
+}
+#marksTitle{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+.studentsbio{
+    font-weight: bold;
+    display: flex;
+    width: 300px;
+    border: 2px solid;
+    padding: 4px;
+}
