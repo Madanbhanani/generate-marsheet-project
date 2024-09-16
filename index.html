@@ -5,8 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marsheet</title>
     <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
+ 
+
+     <form action="">
+        <h2 id="boardTITLE">BOARD OF INTERMEDIATE & SECONDERY EDUCATION MIRPURKHAS SINDH</h2>
+
+        <label for="">Student Name:</label>
+        <input type="text" id="stu_Name" > <br>
+        <label for="">Father's Name:</label>
+        <input type="text" id="F_Name" > <br>
+        <label for="">Surname</label>
+        <input type="text" id="sur_Name" > <br>
+        <label for="">Institute Name:</label>
+        <input type="text" id="instituteName" ><br>
+        <label for="">Dist:</label>
+        <select name="select" id="dist">
+            <option value="Tharparkar">Tharparkar</option>
+        </select>
+        <label for="">Group:</label>
+        <select name="Group" id="selGroup">
+            <option value="PRE-ENGINEERING">PRE-ENG</option>
+            <!-- <option value="Tharparkar">PRE-MEDICAL</option> -->
+        </select>
+        <h2 id="boardTITLE">HSC Part (I) HSC Part (II) Results</h2>
+
+        <div>
+            <table>
+                <tr>
+                    <td>Subject</td>
+                    <td>XI (TH)</td>
+                    <td>XI (PR)</td>
+                    <td>XII (TH)</td>
+                    <td>XII (PRE)</td>
+                </tr>
+                <tr>
+                    <td id="Subject">URDU / SINDHI (SALES) I & II</td>
+                    <td><input type="number" class="number" id="URDU_SINDHI_Part1" placeholder="Enter" required></td>
+                    <td>-</td>
+                    <td><input type="number" class="number" id="URDU_SINDHI_Part2" placeholder="Enter" required></td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>ENGLISH I & II</td>
+                    <td><input type="number" class="number" id="englishPart1" placeholder="Enter" required></td>
+                    <td>-</td>
+                    <td><input type="number" class="number" id="englishPart2" placeholder="Enter" required></td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>ISLAMIYAT /ETHICS</td>
+                    <td><input type="number" class="number" id="islamiyatEthics_part1" placeholder="Enter" ></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>PAKISTAN STUDIES</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><input type="number" class="number" id="pakStudies_part2" placeholder="Enter" ></td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>PHYSICS I & II</td>
+                    <td><input type="number" class="number" id="physics_part1" placeholder="Enter" ></td>
+                    <td>-</td>
+                    <td><input type="number" class="number" id="physics_part2" placeholder="Enter" ></td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>CHEMISTRY I & II</td>
+                    <td><input type="number" class="number" id="chem_part1" placeholder="Enter" ></td>
+                    <td>-</td>
+                    <td><input type="number" class="number" id="chem_part2" placeholder="Enter" ></td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>MATHEMATICS I & II</td>
+                    <td><input type="number" class="number" id="maths_part1" placeholder="Enter"  ></td>
+                    <td>-</td>
+                    <td><input type="number" class="number" id="maths_part2" placeholder="Enter" ></td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <input type="button" value="Send Data" id="button" onclick="clicked()">
+        </div>
+
+     </form>
+
+
 
     <section id="saveMarsheet">
 
@@ -14,18 +106,7 @@
 
 
     </section>
-    <!-- <table>
-        <tr>
-            <td>Hello world hello world hdgfdh</td>
-            <td>Hello world hello world hdgfdh</td>
-            <td>Hello world hello world hdgfdh</td>
-            <td>Hello world hello world hdgfdh</td>
-            <td>Hello world hello world hdgfdh</td>
-            <td>Hello world hello world hdgfdh</td>
-            <td>Hello world hello world hdgfdh</td>
-            <td>Hello world hello world hdgfdh</td>
-        </tr>
-    </table> -->
+   
 </body>
    <script src="./index.js"></script>
 </html>

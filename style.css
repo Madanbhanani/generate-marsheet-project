@@ -1,23 +1,22 @@
-table{
-    width: 80%;
-    border: 2px solid;
 
+
+body{
+    margin:0;
+    padding: 0;
 }
-td{
-    border: 2px solid;
-    padding: 4px ;
-}
-
-
 
 .marsheetCon{
     border: 2px solid;
-    width: 75%;
+    width: 70%;
+    padding: 30px;
+    margin: auto;
 }
 #boardTileHdr{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
+    color: rgb(146, 79, 31);   
+    
 }
 
 /* picture section logo */
@@ -25,30 +24,208 @@ td{
 #picSec{
     display: flex;
     justify-content: space-between;
-    border: 2px solid;
+    /* font-size: 20px; */
+    font-weight: bold;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 #picture{
-    border: 2px solid;
     height: 150px;
     width: 100px;
     margin: 10px;
+    background-image: url('./images/images\ \(1\).png');
+    background-size: cover;
+    background-position: center;
 }
 
 #logoBoard{
-    border: 2px solid;
-    height: 130px;
+    height: 160px;
     margin-top: 20px;
+    width: 120px;
+    background-image: url('./images/a04b0cd5-9dda-4d16-8c6e-72f49c130236.jfif');
+    background-size: cover;
+    margin-left: 25px;
 }
 #marksTitle{
     font-size: 28px;
     font-weight: bold;
     text-align: center;
     font-style: italic;
+    font-family:cursive;
+    position: relative;
+    padding: 20px 40px 10px 0px;
+    color: rgb(25, 25, 71);
 }
+
+
+#groups{
+    text-align: left;
+    width:28%;
+}
+
+#Part{
+    font-style:normal;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 10px;
+    color: black;
+}
+/*_______________ Student data */
 .studentsbio{
     font-weight: bold;
     display: flex;
     width: 300px;
-    border: 2px solid;
     padding: 4px;
 }
+#fullName{
+     text-align: right;
+     padding-left: 80px;
+}
+#fullFName{
+    text-align: right;
+}
+#institute{
+    text-align: right;
+    padding-left: 42px;
+    
+}
+
+#surName{
+    text-align: right;
+    padding-left: 48px;
+}
+#tharParkar{
+    text-align: right;
+    padding-left: 52px;
+
+}
+
+
+/* ____________  table */
+.table{
+    margin-top: 20px;
+}
+th{
+    border: 1px solid;
+    height: 20px;
+    width: 280px;
+}
+td{
+    width: 100px;
+    border: 1px solid;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subject{
+    width: 35%;
+    font-weight: bold;
+    text-align: left;
+    padding: 4px 0px 4px 4px;
+     height: 24px;
+   
+}
+
+
+
+
+/* ______________ Last Selection___________ */
+
+.scanGradeCon{
+    display: flex;
+    justify-content: space-between;
+}
+.qrCode{
+    width: 120px;
+    height: 120px;
+    background-image: url('./images/download.png');
+    background-size: cover;
+    background-position: center;
+}
+.gradecon{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.grade{
+    border: 2px solid;
+    padding: 20px;
+    height: 15px;
+    margin: 10px;
+    width: 80px;
+    text-align: center;
+}
+.date{
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+
+.signContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.controllarSign{
+    border: 2px solid;
+    height: 120px;
+    width: 150px;
+    background-size: cover;
+}
+.Last3{
+    margin-bottom: 30px;
+}
+
+/*************** html page styling ****************/
+  form{
+    border: 2px solid;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(248, 244, 238, 0.603);
+  }
+  label{
+    font-weight: bold;
+  }
+  label,input{
+    width: 90%;
+    padding: 10px;
+    margin:4px auto;
+
+  }
+  select{
+    margin: 10px;
+  }
+
+  #Subject{
+    width: 30%;
+  }
+ .number{
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    
+ }
+ #boardTITLE{
+      color: rgb(139, 73, 25);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+ }
+ #button{
+    width: 200px;
+    background: linear-gradient(rgb(58, 58, 73),gray);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+ }
+ table,td{
+    background-color: white;
+ }
