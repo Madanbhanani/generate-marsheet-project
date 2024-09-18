@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marsheet</title>
     <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
  
 
      <form action="">
-        <h1>heading</h1>
         <h2 id="boardTITLE">BOARD OF INTERMEDIATE & SECONDERY EDUCATION MIRPURKHAS SINDH</h2>
 
         <label for="">Student Name:</label>
@@ -25,76 +23,54 @@
         <label for="">Dist:</label>
         <select name="select" id="dist">
             <option value="Tharparkar">Tharparkar</option>
-        </select>
+        </select><br>
         <label for="">Group:</label>
-        <select name="Group" id="selGroup">
+        <select name="Group" id="selGroup" onclick="selectedGroup()">
             <option value="PRE-ENGINEERING">PRE-ENG</option>
-            <!-- <option value="Tharparkar">PRE-MEDICAL</option> -->
-        </select>
-        <h2 id="boardTITLE">HSC Part (I) HSC Part (II) Results</h2>
+            <option value="PRE-MEDICAL">PRE-MEDICAL</option>
+        </select> <br>
+        <label for="">SEAT NO:</label>
+        <input type="number" id="seatNoInput" onblur=" hello()">
+        
+        <h2 id="partTitle">HSC Part ( I ) Results :</h2>
+        <div class="part_HSC-Container">
+        <label class="labelSubjects" for="URDU_SINDHI_Part1">URDU / SINDHI (I)</label>
+        <input type="number" class="inputResults" id="URDU_SINDHI_Part1" onblur="hello()"><br />
+        <label class="labelSubjects" for="english_1" >ENGLISH (I)</label>
+        <input type="number" class="inputResults" id="english_1"  onblur="hello()"><br />
 
-        <div>
-            <table>
-                <tr>
-                    <td>Subject</td>
-                    <td>XI (TH)</td>
-                    <td>XI (PR)</td>
-                    <td>XII (TH)</td>
-                    <td>XII (PRE)</td>
-                </tr>
-                <tr>
-                    <td id="Subject">URDU / SINDHI (SALES) I & II</td>
-                    <td><input type="number" class="number" id="URDU_SINDHI_Part1" placeholder="Enter" required></td>
-                    <td>-</td>
-                    <td><input type="number" class="number" id="URDU_SINDHI_Part2" placeholder="Enter" required></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>ENGLISH I & II</td>
-                    <td><input type="number" class="number" id="englishPart1" placeholder="Enter" required></td>
-                    <td>-</td>
-                    <td><input type="number" class="number" id="englishPart2" placeholder="Enter" required></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>ISLAMIYAT /ETHICS</td>
-                    <td><input type="number" class="number" id="islamiyatEthics_part1" placeholder="Enter" ></td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>PAKISTAN STUDIES</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td><input type="number" class="number" id="pakStudies_part2" placeholder="Enter" ></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>PHYSICS I & II</td>
-                    <td><input type="number" class="number" id="physics_part1" placeholder="Enter" ></td>
-                    <td>-</td>
-                    <td><input type="number" class="number" id="physics_part2" placeholder="Enter" ></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>CHEMISTRY I & II</td>
-                    <td><input type="number" class="number" id="chem_part1" placeholder="Enter" ></td>
-                    <td>-</td>
-                    <td><input type="number" class="number" id="chem_part2" placeholder="Enter" ></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>MATHEMATICS I & II</td>
-                    <td><input type="number" class="number" id="maths_part1" placeholder="Enter"  ></td>
-                    <td>-</td>
-                    <td><input type="number" class="number" id="maths_part2" placeholder="Enter" ></td>
-                    <td>-</td>
-                </tr>
-            </table>
+        <label class="labelSubjects" for="islamiyatEthics">ISLAMIYAT /ETHICS (I)</label>
+        <input type="number" class="inputResults" id="islamiyatEthics"  onblur="hello()"><br />
+      
+        <label class="labelSubjects" for="physics_1">PHYSICS (I)</label>
+        <input type="number" class="inputResults" id="physics_1"  onblur="hello()"><br />
+
+        <label class="labelSubjects" for="chem_1">CMEMISTRY (I)</label>
+        <input type="number" class="inputResults" id="chem_1"  onblur="hello()"><br />
+
+        <label class="labelSubjects" for="maths_1" id="maths_1Lebal">MATHEMATICS (I)</label>
+        <input type="number" class="inputResults" id="maths_1"  onblur="selectedGroup()" ><br />
         </div>
-        <div>
-            <input type="button" value="Send Data" id="button" onclick="clicked()">
+        <h2 id="partTitle">HSC Part ( II ) Results :</h2>
+        <div class="part_HSC-Container">
+        <label class="labelSubjects" for="URDU_SINDHI_Part2">URDU / SINDHI(II)</label>
+        <input type="number" class="inputResults" id="URDU_SINDHI_Part2"  onblur="hello()"><br />
+        <label class="labelSubjects" for="english_2">ENGLISH(II)</label>
+        <input type="number" class="inputResults" id="english_2"  onblur="hello()"><br />
+
+        <label class="labelSubjects" for="pakStudies">PAKISTAN STUDIES(II)</label>
+        <input type="number" class="inputResults" id="pakStudies" onblur="hello()"><br />
+        <label class="labelSubjects" for="physics_2">PHYSICS(II)</label>
+        <input type="number" class="inputResults" id="physics_2" onblur="hello()"><br />
+
+        <label class="labelSubjects" for="chem_2">CMEMISTRY(II)</label>
+        <input type="number" class="inputResults" id="chem_2" onblur="hello()"><br />
+        <label class="labelSubjects" for="maths_2" id="maths_2Lebal">MATHEMATICS(II)</label>
+        <input type="number" class="inputResults" id="maths_2" onblur="selectedGroup()"><br />
+        <div id="buttonsContainer">
+            <input type="reset" value="reset" class="buttons">
+            <input type="button" value="Send Data" class="buttons" onclick="clicked()">
+        </div>
         </div>
 
      </form>

@@ -7,44 +7,154 @@ var UseSurName=document.getElementById("sur_Name");
 var seldist=document.getElementById("dist")
 var selGroup=document.getElementById("selGroup");
 
+
 var URDU_SINDHI_Part1=document.getElementById("URDU_SINDHI_Part1");
 var URDU_SINDHI_Part2=document.getElementById("URDU_SINDHI_Part2");
 
-var eng_part1=document.getElementById("englishPart1");
-var eng_part2=document.getElementById("englishPart2");
+var Eng_1=document.getElementById("english_1");
+var Eng_2=document.getElementById("english_2");
 
-var islamiyatEthics_part1=document.getElementById("islamiyatEthics_part1");
+var islamiyatEthics=document.getElementById("islamiyatEthics");
 
-var pakStudies_part1=document.getElementById("pakStudies_part2");
+var pakStudies=document.getElementById("pakStudies");
 
-var physics_part1=document.getElementById("physics_part1");
-var physics_part2=document.getElementById("physics_part2");
+var phy_1=document.getElementById("physics_1");
+var phy_2=document.getElementById("physics_2");
 
-var chem_part1=document.getElementById("chem_part1");
-var chem_part2=document.getElementById("chem_part2");
+var chem_1=document.getElementById("chem_1");
+var chem_2=document.getElementById("chem_2");
 
-var maths_part1=document.getElementById("maths_part1");
-var maths_part2=document.getElementById("maths_part2");
+var math_1=document.getElementById("maths_1");
+var math_2=document.getElementById("maths_2");
 
 var totalMarks=1100;
 
 var rendomNo=Math.random()*9+6
 var practical=Math.floor(rendomNo)
 
+var seatNoInput=document.getElementById("seatNoInput");
+
+
+
+
+// HSC PART 01 GET DETA__________________________
+
+ function hello(){
+    if(URDU_SINDHI_Part1.value > 100){
+        alert("Urdu / Sindhi (XI) Total Marks 100 please Correct Enter Marks");
+        URDU_SINDHI_Part1.value=""
+    }
+    else if(URDU_SINDHI_Part2.value > 100){
+        alert("Urdu / Sindhi (XII) Total Marks 100 please Correct Enter Marks");
+        URDU_SINDHI_Part2.value=""
+    }
+    else if(Eng_1.value > 100){
+        alert("English (XI) 100 please Correct Enter Marks");
+        Eng_1.value=""
+    }
+    else if(Eng_2.value > 100){
+        alert("English (XII) 100 please Correct Enter Marks");
+        Eng_2.value=""
+    }
+    else if(islamiyatEthics.value > 50){
+        alert("Islamiyat / Ethics (XI) Total Marks 50 please Correct Enter Marks");
+        islamiyatEthics.value=""
+    }
+    else if(pakStudies.value > 50){
+        alert("pakistan Studies (XII) Total Marks 50 please Correct Enter Marks");
+        pakStudies.value=""
+    }
+    else if(phy_1.value > 85){
+        alert("Physics (XI) Total Marks 85 please Correct Enter Marks");
+        phy_1.value=""
+    }
+    else if(phy_2.value > 85){
+        alert("Physics (XII) Total Marks 85 please Correct Enter Marks");
+        phy_2.value=""
+    }
+    else if(chem_1.value > 85){
+        alert("Chemistry (XI) Total Marks 85 please Correct Enter Marks");
+        chem_1.value=""
+    }
+    else if(chem_2.value > 85){
+        alert("Chemistry (XII) Total Marks 85 please Correct Enter Marks");
+        chem_2.value=""
+    }
+    else if(seatNoInput.value > 10000 ){
+        alert(" SEAT NO: 01 to 10000 please Correct SEAT NO Enter.");
+        seatNoInput.value=""
+    }
+}
+
+var x=document.getElementById("selGroup");
+
+ function selectedGroup(){
+
+     if(x.value === "PRE-MEDICAL"){
+       document.getElementById("maths_1Lebal").innerText="Biology (I)"
+       document.getElementById("maths_2Lebal").innerText="Biology (II)"
+
+          if(math_1.value > 85){
+             alert("Biology (I) Total Marks 85 please Correct Enter Marks");
+             math_1.value=""
+        }
+        if(math_2.value > 85){
+            alert("Biology (II) Total Marks 85 please Correct Enter Marks");
+            math_2.value=""
+        }
+       
+      }
+    else{
+      document.getElementById("maths_1Lebal").innerText="MATHEMATICS (I)"
+      document.getElementById("maths_2Lebal").innerText="MATHEMATICS (II)"
+    
+      if(math_1.value > 100){
+        alert("Mathematics (I) Total Marks 100 please Correct Enter Marks");
+        math_1.value=""
+      }
+      if(math_2.value > 100){
+        alert("Mathematics (II) Total Marks 100 please Correct Enter Marks");
+        math_2.value=""
+      }
+     }
+
+    }
+
+
+
 
 function clicked(){
-
-
-
-    if(stu_name.value !== "" && fname.value !== "" && UseSurName.value !== "" && instituteName !== "" &&
-        URDU_SINDHI_Part1.value !== "" && URDU_SINDHI_Part2.value !== "" && eng_part1.value !== "" && eng_part2 !== "" &&
-        islamiyatEthics_part1.value !== "" && pakStudies_part1.value !== "" && physics_part1.value !== "" && physics_part2 !== "" &&
-        chem_part1.value !== "" && chem_part2.value !== "" && maths_part1.value !== "" && maths_part2 !== ""
-
-
-    ){
-       
    
+  
+    var UrduSindhi_1=parseInt(URDU_SINDHI_Part1.value);
+    var UrduSindhi_2=parseInt(URDU_SINDHI_Part2.value);
+    var English_1=parseInt(Eng_1.value);
+    var English_2=parseInt(Eng_2.value);
+    var islamiyatEthics_1=parseInt(islamiyatEthics.value);
+    var pakistanStudies_2=parseInt(pakStudies.value);
+    var physics_1=parseInt(phy_1.value)
+    var physics_2=parseInt(phy_2.value);
+    var chemistry_1=parseInt(chem_1.value);
+    var chemistry_2=parseInt(chem_2.value);
+    var Mathematics_1=parseInt(math_1.value);
+    var Mathematics_2=parseInt(math_2.value);
+
+    var total_ObtMarks= 
+         (UrduSindhi_1 + UrduSindhi_2)+
+         (English_1 + English_2)+
+         (islamiyatEthics_1 + pakistanStudies_2)+
+         (physics_1 + physics_2 + practical + practical)+
+         (chemistry_1 + chemistry_2 + practical + practical)+
+         (Mathematics_1 + Mathematics_2);
+    var persentage= (total_ObtMarks / totalMarks)*100;
+
+    if( stu_name.value !== "" && fname.value !== "" && instituteName.value !== "" && UseSurName.value !== "" &&
+        URDU_SINDHI_Part1.value !== "" && URDU_SINDHI_Part2.value !== "" && Eng_1.value !== "" && Eng_2.value !== "" &&
+        islamiyatEthics.value !== "" && pakStudies.value !== "" && phy_1.value !== "" && phy_2.value !== "" &&
+        chem_1.value !== "" && chem_2.value !== "" && math_1.value !== "" && math_2.value !== "" && seatNoInput.value !==""
+    ){
+
+       
 var saveMarsheet=document.getElementById("saveMarsheet");
 var marsheetCon=document.createElement("div");
     marsheetCon.setAttribute("class","marsheetCon");
@@ -57,29 +167,24 @@ var boardTileHdr=document.createElement("div");
 var picSec=document.createElement("div");
     picSec.setAttribute("id","picSec")
 
-   var   p1=document.createElement("div")
-         p1.setAttribute("id","picture")
-   var   p2=document.createElement("div");
+var p1=document.createElement("div")
+    p1.setAttribute("id","picture")
+var p2=document.createElement("div");
          
-   var   logoBoard=document.createElement("div");
-         logoBoard.setAttribute("id","logoBoard")
-        //  logoBoard.
-         p2.appendChild(logoBoard)
+var logoBoard=document.createElement("div");
+    logoBoard.setAttribute("id","logoBoard")
+    p2.appendChild(logoBoard);
+var p3=document.createElement("div");
+    p3.innerText=`Group: ${selGroup.value}`
+    p3.setAttribute("id","groups")
 
-   var   p3=document.createElement("div");
-         p3.innerText=`Group: ${selGroup.value}`
-         p3.setAttribute("id","groups")
-
-   var  seatNo=document.createElement("div")
-        seatNo.innerText="Seat No: 34332";
-        seatNo.setAttribute("id","seatNo")
-         p3.appendChild(seatNo);
-
-picSec.appendChild(p1)
-picSec.appendChild(p2)
-picSec.appendChild(p3)
-
-
+var seatNo=document.createElement("div");
+    seatNo.innerText=`SEAT NO: ${seatNoInput.value}`
+    seatNo.setAttribute("id","seatNo")
+    p3.appendChild(seatNo);
+    picSec.appendChild(p1)
+    picSec.appendChild(p2)
+    picSec.appendChild(p3)
 
 var marksTitle=document.createElement("div")
     marksTitle.innerText="MARKS CERTIFICATE"
@@ -90,10 +195,7 @@ var Part=document.createElement("div")
     Part.setAttribute("id","Part")
     marksTitle.appendChild(Part)
 
-
-// Picture setion Ended
-
-// Students Information 
+// Students Information :---------------------------------------------------------
 var studentsData=document.createElement("div");
 
 var stuname=document.createElement("div");
@@ -134,12 +236,12 @@ var dist=document.createElement("div");
     dist.innerText="DISTRICT:"
     dist.setAttribute("class","studentsbio")
     userSelectDist=document.createElement("div");
-    userSelectDist.innerText= seldist.value;                  // userSelectDist ***********
+    userSelectDist.innerText= seldist.value;                 
     userSelectDist.setAttribute("id","tharParkar")
     dist.appendChild(userSelectDist);
 
 
-// table formtat data
+// Generate Marsheet Start :----------------------------------------
 
 
 var table=document.createElement("table");
@@ -148,7 +250,8 @@ var table=document.createElement("table");
 
 var tr1=document.createElement("tr");
 var th1=document.createElement("th");
-    th1.innerText="SUBJECT"
+    th1.innerText="SUBJECTS"
+    th1.setAttribute("id","titleSubj")
     th1.setAttribute("rowspan","2")
 var th2=document.createElement("th");
     th2.innerText="MAX. MARKS"
@@ -178,8 +281,6 @@ var tr2_th4=document.createElement("th");
     tr2.appendChild(tr2_th2)
     tr2.appendChild(tr2_th3)
     tr2.appendChild(tr2_th4)
- 
-
 
 
 var tr3=document.createElement("tr");
@@ -189,13 +290,13 @@ var tr3_td1=document.createElement("td");
 var tr3_td2=document.createElement("td");
     tr3_td2.innerText="200"
 var tr3_td3=document.createElement("td");
-    tr3_td3.innerText= URDU_SINDHI_Part1;
+    tr3_td3.innerText= UrduSindhi_1;
 var tr3_td4=document.createElement("td") 
 var tr3_td5=document.createElement("td") 
-    tr3_td5.innerText= URDU_SINDHI_Part2;             
+    tr3_td5.innerText= UrduSindhi_2;            
 var tr3_td6=document.createElement("td")
 var tr3_td7=document.createElement("td")
-    tr3_td7.innerText= URDU_SINDHI_Part1.value + URDU_SINDHI_Part2.value;
+    tr3_td7.innerText= (UrduSindhi_1 + UrduSindhi_2) ;
     tr3.appendChild(tr3_td1)
     tr3.appendChild(tr3_td2)
     tr3.appendChild(tr3_td3)
@@ -212,13 +313,13 @@ var tr4_td1=document.createElement("td")
 var tr4_td2=document.createElement("td");
     tr4_td2.innerText="200"
 var tr4_td3=document.createElement("td")
-    tr4_td3.innerText= eng_part1.value ;
+    tr4_td3.innerText= English_1;
 var tr4_td4=document.createElement("td") 
 var tr4_td5=document.createElement("td")
-    tr4_td5.innerText= eng_part2.value
+    tr4_td5.innerText= English_2;
 var tr4_td6=document.createElement("td")
 var tr4_td7=document.createElement("td")
-    tr4_td7.innerText= "here total"
+    tr4_td7.innerText= (English_1 + English_2)
 
     tr4.appendChild(tr4_td1)
     tr4.appendChild(tr4_td2)
@@ -235,12 +336,12 @@ var  tr5_td1=document.createElement("td")
 var  tr5_td2=document.createElement("td");
      tr5_td2.innerText="50"                    
 var  tr5_td3=document.createElement("td")
-     tr5_td3.innerText= islamiyatEthics_part1.value;
+     tr5_td3.innerText= islamiyatEthics_1;
 var  tr5_td4=document.createElement("td") 
 var  tr5_td5=document.createElement("td") 
 var  tr5_td6=document.createElement("td")
 var  tr5_td7=document.createElement("td")
-     tr5_td7.innerText= islamiyatEthics_part1.value;
+     tr5_td7.innerText= islamiyatEthics_1;
 
     tr5.appendChild(tr5_td1);
     tr5.appendChild(tr5_td2)
@@ -250,21 +351,19 @@ var  tr5_td7=document.createElement("td")
     tr5.appendChild(tr5_td6)
     tr5.appendChild(tr5_td7)
     
-
-
 var tr6=document.createElement("tr");
 var tr6_td1=document.createElement("td") 
-    tr6_td1.innerText="PAKISTAN STUDIES"                                //+++++++++++++
+    tr6_td1.innerText="PAKISTAN STUDIES"                          
     tr6_td1.setAttribute("class","subject")     
 var tr6_td2=document.createElement("td")
     tr6_td2.innerText="50"
 var tr6_td3=document.createElement("td") 
 var tr6_td4=document.createElement("td") 
 var tr6_td5=document.createElement("td") 
-    tr6_td5.innerText= pakStudies_part1.value;
+    tr6_td5.innerText= pakistanStudies_2
 var tr6_td6=document.createElement("td")
 var tr6_td7=document.createElement("td")
-    tr6_td7.innerText= pakStudies_part1.value;
+    tr6_td7.innerText= pakistanStudies_2
 
     tr6.appendChild(tr6_td1)
     tr6.appendChild(tr6_td2)
@@ -276,19 +375,30 @@ var tr6_td7=document.createElement("td")
 
 var tr7=document.createElement("tr");
 var tr7_td1=document.createElement("td")
-     tr7_td1.innerText="MATHEMATICS I & II"                          //+++++++++++++++++++
-     tr7_td1.setAttribute("class","subject")
+     tr7_td1.innerText="MATHEMATICS I & II"                  
+     tr7_td1.setAttribute("class","subject");
+     if(x.value === "PRE-MEDICAL"){
+        tr7_td1.innerText="Biology I & II"; 
+        var prac= practical;                 
+      }
+      else{
+        tr7_td1.innerText="MATHEMATICS I & II"
+        var prac= "";                 
+                  
+    }
+
 var tr7_td2=document.createElement("td");
     tr7_td2.innerText="200"
 var tr7_td3=document.createElement("td")
-    tr7_td3.innerText=maths_part1.value;     
-var tr7_td4=document.createElement("td") 
+    tr7_td3.innerText= Mathematics_1;     
+var tr7_td4=document.createElement("td")
+    tr7_td4.innerText= prac;
 var tr7_td5=document.createElement("td");
-    tr7_td5.innerText=maths_part1.value 
+    tr7_td5.innerText= Mathematics_2
 var tr7_td6=document.createElement("td")
-    tr7_td6.innerText=""
+    tr7_td6.innerText= prac;
 var tr7_td7=document.createElement("td")
-    tr7_td7.innerText="total here";
+    tr7_td7.innerText= Mathematics_1 + Mathematics_2 + prac + prac;
 
     tr7.appendChild(tr7_td1)
     tr7.appendChild(tr7_td2)
@@ -301,19 +411,19 @@ var tr7_td7=document.createElement("td")
 var tr8=document.createElement("tr");
 var tr8_td1=document.createElement("td");
     tr8_td1.innerText="PHYSICS I & II"
-    tr8_td1.setAttribute("class","subject")
+    tr8_td1.setAttribute("class","subject");
 var tr8_td2=document.createElement("td");
     tr8_td2.innerText="200"
-var tr8_td3=document.createElement("td") 
-     tr8_td3.innerText=physics_part1.value;                        
+var tr8_td3=document.createElement("td"); 
+     tr8_td3.innerText= physics_1;                        
 var tr8_td4=document.createElement("td");
     tr8_td4.innerText=practical
 var tr8_td5=document.createElement("td");
-    tr8_td5.innerText=physics_part2.value
-var tr8_td6=document.createElement("td")
+    tr8_td5.innerText= physics_2;
+var tr8_td6=document.createElement("td");
     tr8_td6.innerText=practical
-var tr8_td7=document.createElement("td")
-    tr8_td7.innerText="here total"
+var tr8_td7=document.createElement("td");
+    tr8_td7.innerText= (physics_1 + physics_2 + practical + practical);
 
     tr8.appendChild(tr8_td1)
     tr8.appendChild(tr8_td2)
@@ -331,15 +441,15 @@ var tr9_td1=document.createElement("td")
 var tr9_td2=document.createElement("td")
     tr9_td2.innerText="200"
 var tr9_td3=document.createElement("td") 
-    tr9_td3.innerText=chem_part1.value;
+    tr9_td3.innerText= chemistry_1;
 var tr9_td4=document.createElement("td");
     tr9_td4.innerText=practical;
 var tr9_td5=document.createElement("td");
-    tr9_td5.innerText= chem_part2.value;                           
+    tr9_td5.innerText= chemistry_2;                     
 var tr9_td6=document.createElement("td");
     tr9_td6.innerText=practical;
 var tr9_td7=document.createElement("td");
-    tr9_td7.innerText="total here"
+    tr9_td7.innerText= chemistry_1 + chemistry_2 + practical + practical;
 
     tr9.appendChild(tr9_td1)
     tr9.appendChild(tr9_td2)
@@ -360,6 +470,7 @@ var tr10_td4=document.createElement("td")
 var tr10_td5=document.createElement("td") 
 var tr10_td6=document.createElement("td")
 var tr10_td7=document.createElement("td")
+    tr10_td7.innerText=total_ObtMarks
     tr10.appendChild(tr10_td1)
     tr10.appendChild(tr10_td2)
     tr10.appendChild(tr10_td3)
@@ -381,24 +492,24 @@ var tr11_td1=document.createElement("td")
     studentsData.appendChild(dist)
 
 
-marsheetCon.appendChild(boardTileHdr);
-saveMarsheet.appendChild(marsheetCon)
-marsheetCon.appendChild(picSec);
-marsheetCon.appendChild(marksTitle);
-marsheetCon.appendChild(studentsData);
-
-marsheetCon.appendChild(table);
-marsheetCon.appendChild(tr1);
-marsheetCon.appendChild(tr2);
-marsheetCon.appendChild(tr3);
-marsheetCon.appendChild(tr4);
-marsheetCon.appendChild(tr5);
-marsheetCon.appendChild(tr6);
-marsheetCon.appendChild(tr8);
-marsheetCon.appendChild(tr9);
-marsheetCon.appendChild(tr7);
-marsheetCon.appendChild(tr10);
-marsheetCon.appendChild(tr11);
+    marsheetCon.appendChild(boardTileHdr);
+    saveMarsheet.appendChild(marsheetCon)
+    marsheetCon.appendChild(picSec);
+    marsheetCon.appendChild(marksTitle);
+    marsheetCon.appendChild(studentsData);
+    
+    marsheetCon.appendChild(table);
+    marsheetCon.appendChild(tr1);
+    marsheetCon.appendChild(tr2);
+    marsheetCon.appendChild(tr3);
+    marsheetCon.appendChild(tr4);
+    marsheetCon.appendChild(tr5);
+    marsheetCon.appendChild(tr6);
+    marsheetCon.appendChild(tr8);
+    marsheetCon.appendChild(tr9);
+    marsheetCon.appendChild(tr7);
+    marsheetCon.appendChild(tr10);
+    marsheetCon.appendChild(tr11);
 
 
 //______________ Last Selection___________
@@ -416,46 +527,78 @@ var gradeCon=document.createElement("div");
     gradeCon.innerText="GRADE"
     gradeCon.setAttribute("class","gradecon")
 var grade=document.createElement("div");
-    grade.innerText="A"
-    grade.setAttribute("class","grade")
-   gradeCon.appendChild(grade);
-   scanGradeCon.appendChild(qrCode);
-   scanGradeCon.appendChild(gradeCon)
-   marsheetCon.appendChild(scanGradeCon);
-   marsheetCon.appendChild(date);
+    grade.setAttribute("class","grade");
 
+    if(total_ObtMarks > 880){
+        grade.innerText="A-1"
+    }
+    else if(total_ObtMarks > 770 && total_ObtMarks < 879) {
+        grade.innerText="A"
+    } 
+    else if(total_ObtMarks > 660 && total_ObtMarks < 769){
+        grade.innerText="B"
+    }
+    else if(total_ObtMarks > 550 && total_ObtMarks < 659){
+        grade.innerText="C"
+    }
+    else if(total_ObtMarks > 440 && total_ObtMarks < 549){
+        grade.innerText="D"
+    }
+    else {
+        grade.innerText="E"
+    }
 
-
+    gradeCon.appendChild(grade);
+    scanGradeCon.appendChild(qrCode);
+    scanGradeCon.appendChild(gradeCon)
+    marsheetCon.appendChild(scanGradeCon);
+    marsheetCon.appendChild(date);
 
 var signContainer=document.createElement("div");
-signContainer.setAttribute("class","signContainer")
+    signContainer.setAttribute("class","signContainer")
 
 var Last1=document.createElement("div");
 var Last2=document.createElement("div");
-    Last2.innerText="asasas"
     Last2.setAttribute("class","controllarSign")
 var Last3=document.createElement("div");
     Last3.innerText="Received Rs:_______ Challan:______Dated:______ Bank Code /Name:_______"
     Last3.setAttribute("class","Last3")
 var Last4=document.createElement("div");
-    Last4.innerText="Prepared by___________ Read by______________ Checked by_____________"
+    Last4.innerText="Prepared by_________ Read by_________ Checked by________"
     Last1.appendChild(Last4)
 var certificateNo=document.createElement("div");
     certificateNo.innerText="Certificate No. 01920"
-Last1.appendChild(Last3)
-Last1.appendChild(Last4)
+    Last1.appendChild(Last3)
+    Last1.appendChild(Last4)
 
-signContainer.appendChild(Last1)
-signContainer.appendChild(Last2)
-marsheetCon.appendChild(signContainer);
-marsheetCon.appendChild(certificateNo);
+   signContainer.appendChild(Last1)
+   signContainer.appendChild(Last2)
+   marsheetCon.appendChild(signContainer);
+   marsheetCon.appendChild(certificateNo);
 
-
+ // clicked on button input value is empty
+    stu_name.value = "" 
+    fname.value = "" 
+    instituteName.value = ""
+    UseSurName.value = ""
+    URDU_SINDHI_Part1.value = "" 
+    URDU_SINDHI_Part2.value = "" 
+    Eng_1.value = "" 
+    Eng_2.value = ""
+    islamiyatEthics.value = ""
+    pakStudies.value = "" 
+    phy_1.value = "" 
+    phy_2.value = "" 
+    chem_1.value = ""  
+    chem_2.value = "" 
+    math_1.value = "" 
+    math_2.value = "" 
 
 }
 else{
    alert("Please Enter Data")
+}
+}
 
-}
-}
+
 

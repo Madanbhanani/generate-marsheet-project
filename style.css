@@ -7,15 +7,17 @@ body{
 
 .marsheetCon{
     border: 2px solid;
-    width: 70%;
+    width: 60%;
     padding: 30px;
-    margin: auto;
+    margin: 20px auto;
+    
 }
 #boardTileHdr{
-    font-size: 30px;
+    font-size: 33px;
     font-weight: bold;
     text-align: center;
-    color: rgb(146, 79, 31);   
+    color: rgb(146, 79, 31);  
+    margin-bottom: 10px; 
     
 }
 
@@ -24,7 +26,6 @@ body{
 #picSec{
     display: flex;
     justify-content: space-between;
-    /* font-size: 20px; */
     font-weight: bold;
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -61,7 +62,11 @@ body{
 
 #groups{
     text-align: left;
-    width:28%;
+    font-weight: normal;
+}
+#seatNo{
+    margin-top: 20px;
+    font-size: 20px;
 }
 
 #Part{
@@ -78,29 +83,30 @@ body{
 .studentsbio{
     font-weight: bold;
     display: flex;
-    width: 300px;
     padding: 4px;
+    
 }
 #fullName{
      text-align: right;
-     padding-left: 80px;
+     padding-left: 83px;
 }
 #fullFName{
     text-align: right;
 }
 #institute{
     text-align: right;
-    padding-left: 42px;
-    
+    padding-left: 45px;
+    width: 100%;
+    text-align: left;
 }
 
 #surName{
     text-align: right;
-    padding-left: 48px;
+    padding-left: 51px;
 }
 #tharParkar{
     text-align: right;
-    padding-left: 52px;
+    padding-left: 55px;
 
 }
 
@@ -108,26 +114,34 @@ body{
 /* ____________  table */
 .table{
     margin-top: 20px;
+    font-size: 13px;
 }
 th{
     border: 1px solid;
-    height: 20px;
+    height: 28px;
     width: 280px;
+    font-size: 13px;
 }
 td{
     width: 100px;
     border: 1px solid;
     text-align: center;
     font-weight: bold;
+    height: 20px;
+}
+#titleSubj{
+    font-size: 17px;
+    text-align: left;
+    padding-left: 20px;
+    padding: 10px;
 }
 
 .subject{
     width: 35%;
     font-weight: bold;
     text-align: left;
-    padding: 4px 0px 4px 4px;
-     height: 24px;
-   
+    padding: 7px 0px 7px 4px;
+    font-size: 13px;
 }
 
 
@@ -156,10 +170,10 @@ td{
 }
 .grade{
     border: 2px solid;
-    padding: 20px;
-    height: 15px;
+    height: 25px;
+    padding: 10px;
     margin: 10px;
-    width: 80px;
+    width:70px;
     text-align: center;
 }
 .date{
@@ -172,13 +186,17 @@ td{
     justify-content: space-between;
 }
 .controllarSign{
-    border: 2px solid;
-    height: 120px;
+    height: 100px;
     width: 150px;
     background-size: cover;
+    background-image: url('./images/controller\ of\ examinations.jfif');
+    background-position: center;
+    background-clip: border-box;
+
 }
 .Last3{
     margin-bottom: 30px;
+    font-size: 13px;
 }
 
 /*************** html page styling ****************/
@@ -189,43 +207,169 @@ td{
     padding: 20px;
     background-color: rgba(248, 244, 238, 0.603);
   }
-  label{
-    font-weight: bold;
-  }
+  #boardTITLE{
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   }
   label,input{
-    width: 90%;
+    width: 85%;
     padding: 10px;
     margin:4px auto;
-
+    border: 2px solid gray;
+    border-radius: 4px ;
+   margin-left:20px;
+  }
+  #dist{
+    width: 150px;
   }
   select{
-    margin: 10px;
+    margin:10px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 135px;
+  }
+  #seatNoInput{
+    width: 80px;
+    border: 1px solid;
+
   }
 
-  #Subject{
-    width: 30%;
+  /* Results input */
+  #URDU_SINDHI_Part1, #URDU_SINDHI_Part2{
+     width: 50%;
   }
- .number{
-    width: 50px;
-    height: 50px;
-    outline: none;
+  #english_1, #english_2{
+    width: 50%;
+  }
+  #islamiyatEthics{
+    width: 41%;
+  }
+  #physics_1, #physics_2{
+    width: 50%;
+  }
+  #chem_1,#chem_2{
+    width: 52%;
+  }
+  #maths_1,#maths_2{
+     width: 40%;
+  }
+  #pakStudies{
+    width: 42%;
+  }
+
+
+  label{
+    font-weight: bold;
     border: none;
-    
- }
- #boardTITLE{
-      color: rgb(139, 73, 25);
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
- }
- #button{
-    width: 200px;
-    background: linear-gradient(rgb(58, 58, 73),gray);
-    color: white;
-    border-radius: 10px;
-    border: none;
+    margin-left:0px;
+  }
+ #partTitle{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 20px;
     font-size: 20px;
+ }
+ .inputResults{
+    width: 30%;
+ }
+ .labelSubjects{
+    border: 2px solid rgb(148, 85, 54);
+    color: chocolate;
     cursor: pointer;
  }
- table,td{
-    background-color: white;
+ #buttonsContainer{
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    padding-top: 20px;
+ }
+
+.buttons{
+    width: 30%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    display: block;
+    cursor: pointer;
+    margin-left: 40px;
+
+}
+.buttons:hover{
+    background-color: rgb(139, 83, 42);
+    color: white;
+    transition: 1s ease-in;
+}
+
+
+
+ @media (max-width:1000px){
+     body{
+        background-color: rgba(0, 0, 0, 0.288);
+     }
+    
+     form{
+        min-width: 625px;
+         margin: auto;
+     }
+     .marsheetCon{
+        min-width: 602px;
+        background-color: white;
+        border: 4px solid;
+     }
+     #marksTitle{
+        font-size: 26px;
+        font-weight: bold;
+        padding: 5px 40px 4px 0px;
+    }
+     #Part{
+        font-size: 18px;
+     }
+     .date{
+        margin-bottom: 50px;
+     }
+
+/* Results input */
+  #URDU_SINDHI_Part1, #URDU_SINDHI_Part2{
+    width: 51%;
+  }
+ #english_1, #english_2{
+    width: 58%;
+ }
+ #islamiyatEthics{
+     width: 44%;
+    }
+ #physics_1, #physics_2{
+     width: 58%;
+   }
+ #chem_1,#chem_2{
+   width: 53%;
+    }
+ #maths_1{
+     width: 49%;
+    }
+ 
+  #maths_2{
+    width: 50%;
+    }
+  #pakStudies{
+     width: 45%;
+    }
+.part_HSC-Container{
+      text-align: center;
+   } 
+
+ .studentsbio{
+    font-size: 13px;
+    }
+  .Last3{
+    margin-bottom: 10px;
+   }
+   td{
+      height: 10px;
+   }
+   .buttons{
+    margin-left: 60px;
+   }
  }
