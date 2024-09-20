@@ -170,7 +170,7 @@ td{
 }
 .grade{
     border: 2px solid;
-    height: 25px;
+    height: 20px;
     padding: 10px;
     margin: 10px;
     width:70px;
@@ -308,15 +308,22 @@ td{
      body{
         background-color: rgba(0, 0, 0, 0.288);
      }
+     #title_dataall{
+      padding: 20px;
+      border: 2px solid;
+     }
+     
     
      form{
-        min-width: 625px;
+        min-width: 640px;
          margin: auto;
+         border: none;
+         
      }
      .marsheetCon{
-        min-width: 602px;
+        min-width: 570px;
         background-color: white;
-        border: 4px solid;
+        border: none;
      }
      #marksTitle{
         font-size: 26px;
@@ -365,6 +372,8 @@ td{
     }
   .Last3{
     margin-bottom: 10px;
+    font-size: 12px;
+
    }
    td{
       height: 10px;
@@ -372,4 +381,10 @@ td{
    .buttons{
     margin-left: 60px;
    }
+  
+   .marsheetData{
+    padding: 20px;
+    min-width: 640px;
+   }
+
  }

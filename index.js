@@ -156,7 +156,12 @@ function clicked(){
 
        
 var saveMarsheet=document.getElementById("saveMarsheet");
+
 var marsheetCon=document.createElement("div");
+
+var marsheetData=document.createElement("div");
+    marsheetData.setAttribute("class","marsheetData");
+
     marsheetCon.setAttribute("class","marsheetCon");
 var boardTileHdr=document.createElement("div");
     boardTileHdr.innerText="𝕭𝖔𝖆𝖗𝖉 𝕺𝖋 𝕴𝖓𝖙𝖊𝖗𝖒𝖊𝖉𝖎𝖆𝖙𝖊 & 𝕾𝖊𝖈𝖔𝖓𝖉𝖆𝖗𝖞 𝕰𝖉𝖚𝖈𝖆𝖙𝖎𝖔𝖓 𝕸𝖎𝖗𝖕𝖚𝖗𝖐𝖍𝖆𝖘 𝕾𝖎𝖓𝖉𝖍"
@@ -564,10 +569,11 @@ var Last3=document.createElement("div");
     Last3.innerText="Received Rs:_______ Challan:______Dated:______ Bank Code /Name:_______"
     Last3.setAttribute("class","Last3")
 var Last4=document.createElement("div");
-    Last4.innerText="Prepared by_________ Read by_________ Checked by________"
+    Last4.innerText="Prepared by_____________ Read by______________ Checked by___________"
+    Last4.setAttribute("class","Last3")
     Last1.appendChild(Last4)
 var certificateNo=document.createElement("div");
-    certificateNo.innerText="Certificate No. 01920"
+    certificateNo.innerText=`Certificate No. 0192 ${practical}`
     Last1.appendChild(Last3)
     Last1.appendChild(Last4)
 
@@ -576,6 +582,10 @@ var certificateNo=document.createElement("div");
    marsheetCon.appendChild(signContainer);
    marsheetCon.appendChild(certificateNo);
 
+
+
+   marsheetData.appendChild(marsheetCon)
+   saveMarsheet.appendChild(marsheetData)
  // clicked on button input value is empty
     stu_name.value = "" 
     fname.value = "" 
@@ -593,12 +603,16 @@ var certificateNo=document.createElement("div");
     chem_2.value = "" 
     math_1.value = "" 
     math_2.value = "" 
+    seatNoInput.value= ""
+
+
 
 }
 else{
    alert("Please Enter Data")
 }
 }
+clicked()
 
 
 
